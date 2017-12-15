@@ -8,5 +8,8 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "Hello",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "3.0.4" % "test",
+      "org.typelevel" %% "cats-core" % "1.0.0-RC1",
+      "org.typelevel" %% "cats-free" % "1.0.0-RC1")
   )
